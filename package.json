@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack --progress --config=webpack.config.js --mode=development",
-    "watch": "webpack --progress --watch --config=webpack.config.js --mode=development",
+    "watch": "cross-env NODE_ENV=development webpack --progress --watch --config=webpack.config.js --mode=development",
     "prod": "cross-env NODE_ENV=production webpack --no-progress --config=webpack.config.js --mode=production"
   },
   "devDependencies": {

@@ -5,10 +5,16 @@ const path = require('path');
 let glob = require('glob-all');
 let PurgecssPlugin = require('purgecss-webpack-plugin');
 
+const isDev = process.env.NODE_ENV === 'development';
+
 class TailwindExtractor {
   static extract(content) {
     return content.match(/[A-z0-9-:\/]+/g) || [];
   }
+}
+
+function noop() {
+  return () => {};
 }
 
 module.exports = {
@@ -43,14 +49,16 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new PurgecssPlugin({
-      paths: glob.sync([path.join(__dirname, './**/*.html')]),
-      extractors: [
-        {
-          extractor: TailwindExtractor,
-          extensions: ['html', 'js'],
-        },
-      ],
-    }),
+    isDev
+      ? noop()
+      : new PurgecssPlugin({
+          paths: glob.sync([path.join(__dirname, './**/*.html')]),
+          extractors: [
+            {
+              extractor: TailwindExtractor,
+              extensions: ['html', 'js'],
+            },
+          ],
+        }),
   ],
 };

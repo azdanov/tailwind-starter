@@ -1,0 +1,13 @@
+@tailwind preflight;
+
+@tailwind components;
+
+.btn-outline-purple {
+  @apply text-sm text-purple-dark border border-purple px-4 py-1 rounded-full;
+}
+
+.btn-outline-purple:hover {
+  @apply bg-purple text-white;
+}
+
+@tailwind utilities;

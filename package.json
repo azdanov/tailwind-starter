@@ -9,7 +9,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "^0.28.7",
     "glob-all": "^3.1.0",
-    "mini-css-extract-plugin": "^0.4.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "postcss": "^6.0.23",
     "postcss-loader": "^2.0.8",
@@ -17,7 +17,7 @@
     "style-loader": "^0.21.0",
     "tailwindcss": "^0.6.1",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.12.2",
-    "webpack-command": "^0.3.1"
+    "webpack": "^4.15.1",
+    "webpack-command": "^0.4.0"
   }
 }

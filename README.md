@@ -10,15 +10,13 @@ npm i
 yarn
 
 # For development with webpack watch:
-npm run watch
-
-# For unminified and purged dev build:
-npm run dev
+npm run start
 
 # For minified and purged production build:
-npm run prod
+npm run build
+
+# For unminified and purged dev build:
+npm run build:dev
 ```
 
-Webpack will watch `/src/styles.css` and `/tailwind.js` and rebuild your stylesheet on every change.
-
-You can play around with `/index.html` to see the effects of your changes.
+Webpack will watch `./src/styles.css` and `./src/index.html` and rebuild your stylesheet on every change.

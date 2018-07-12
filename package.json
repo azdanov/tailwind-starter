@@ -1,23 +1,26 @@
 {
   "private": true,
   "scripts": {
-    "dev": "webpack --progress --config=webpack.config.js --mode=development",
-    "watch": "cross-env NODE_ENV=development webpack --progress --watch --config=webpack.config.js --mode=development",
-    "prod": "cross-env NODE_ENV=production webpack --no-progress --config=webpack.config.js --mode=production"
+    "start": "cross-env NODE_ENV=development webpack-serve --open",
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack"
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "css-loader": "^0.28.7",
+    "css-loader": "^1.0.0",
     "glob-all": "^3.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "optimize-css-assets-webpack-plugin": "^4.0.3",
     "postcss": "^6.0.23",
-    "postcss-loader": "^2.0.8",
+    "postcss-loader": "^2.1.6",
     "purgecss-webpack-plugin": "^1.2.0",
     "style-loader": "^0.21.0",
-    "tailwindcss": "^0.6.1",
+    "tailwindcss": "^0.6.3",
     "uglifyjs-webpack-plugin": "^1.2.7",
-    "webpack": "^4.15.1",
-    "webpack-command": "^0.4.0"
+    "webpack": "^4.16.0",
+    "webpack-command": "^0.4.1",
+    "webpack-serve": "^2.0.2"
   }
 }

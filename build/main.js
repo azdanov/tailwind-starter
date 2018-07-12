@@ -81,20 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./src/index.html":
+/*!************************!*\
+  !*** ./src/index.html ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_styles_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/styles.css */ \"./src/styles.css\");\n/* harmony import */ var _src_styles_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_styles_css__WEBPACK_IMPORTED_MODULE_0__);\n\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("module.exports = \"<!doctype html>\\n<html lang=\\\"en\\\">\\n\\n<head>\\n  <title>Tailwind Starter Template</title>\\n  <meta charset=\\\"utf-8\\\">\\n  <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1, shrink-to-fit=no\\\">\\n</head>\\n\\n<body class=\\\"antialiased\\\">\\n  <div class=\\\"min-h-screen flex flex-col items-center justify-center\\\">\\n\\n    <div class=\\\"rounded-lg shadow-lg bg-white py-4 px-6\\\">\\n      <div class=\\\"md:flex md:items-center\\\">\\n        <div class=\\\"flex-no-shrink mb-4 md:mb-0 md:mr-4\\\">\\n          <img class=\\\"mx-auto block w-24 h-24 rounded-full\\\" src=\\\"https://avatars0.githubusercontent.com/u/4323180?s=460&v=4\\\" alt=\\\"\\\">\\n        </div>\\n        <div class=\\\"text-center md:text-left\\\">\\n          <h3 class=\\\"text-3xl font-normal\\\">Adam Wathan</h3>\\n          <p class=\\\"text-grey-dark mb-3\\\">Developer at NothingWorks Inc.</p>\\n          <a class=\\\"btn-outline-purple no-underline\\\" href=\\\"https://tailwindcss.com/\\\">Tailwind CSS</a>\\n        </div>\\n      </div>\\n    </div>\\n\\n    <a class=\\\"font-mono mt-8\\\" href=\\\"https://github.com/azdanov/tailwind-starter\\\">Tailwind CSS Starter Project</a>\\n\\n  </div>\\n</body>\\n\\n</html>\";\n\n//# sourceURL=webpack:///./src/index.html?");
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Used for HMR\n__webpack_require__(/*! ./index.html */ \"./src/index.html\");\n__webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

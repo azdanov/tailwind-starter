@@ -2,8 +2,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const path = require('path');
-let glob = require('glob-all');
-let PurgecssPlugin = require('purgecss-webpack-plugin');
+const glob = require('glob-all');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -18,9 +19,10 @@ function noop() {
 }
 
 module.exports = {
-  entry: './index.js',
+  mode: process.env.NODE_ENV,
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
   },
   module: {
     rules: [
@@ -31,6 +33,12 @@ module.exports = {
           { loader: 'css-loader', options: { importLoaders: 1 } },
           'postcss-loader',
         ],
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader',
+        },
       },
     ],
   },
@@ -60,5 +68,6 @@ module.exports = {
             },
           ],
         }),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
   ],
 };

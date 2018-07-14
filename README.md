@@ -4,10 +4,7 @@ This is an example of a super simple Webpack setup for using [Tailwind CSS](http
 
 ```sh
 # Install using npm
-npm i
-
-# Install using Yarn
-yarn
+npm install
 
 # For development with webpack watch:
 npm run start

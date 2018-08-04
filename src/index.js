@@ -1,3 +1,3 @@
 // Used for HMR
-require("./index.html");
-require("./styles.css");
+import "./index.html";
+import "./styles.pcss";

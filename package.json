@@ -19,7 +19,7 @@
     "style-loader": "0.23.0",
     "tailwindcss": "0.6.5",
     "webpack": "4.19.1",
-    "uglifyjs-webpack-plugin": "2.0.0",
+    "uglifyjs-webpack-plugin": "2.0.1",
     "webpack-command": "0.4.1",
     "webpack-serve": "2.0.2"
   }
